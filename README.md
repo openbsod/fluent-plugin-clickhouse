@@ -1,5 +1,15 @@
 # What is this?
-It's a output plugin for [Fluentd](https://www.fluentd.org/), that sends data into [Yandex ClickHouse](clickhouse.yandex) database. By now it supports buffered output (*I still don't know how*) and handling few exceptions.  
+It's a output plugin for [Fluentd](https://www.fluentd.org/), that sends data into [Yandex ClickHouse](clickhouse.yandex) database. By now it supports buffered output (*I still don't know how*) and handling few exceptions.
+
+# Installation ( debian 9 stretch )
+
+```
+curl https://packages.treasuredata.com/GPG-KEY-td-agent | apt-key add -
+echo "deb http://packages.treasuredata.com/2/debian/stretch/ stretch contrib" > /etc/apt/sources.list.d/treasure-data.list
+apt update
+apt install -y td-agent
+```
+
 # How to use it?
 I'm not a ruby programmer who knows how to write gems, so **just put `out_clickhouse.rb` to /etc/td-agent/plugin**.  
 There's example td-agent.conf:
