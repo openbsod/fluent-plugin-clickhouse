@@ -1,5 +1,5 @@
 # What is this?
-It's a output plugin for [Fluentd](https://www.fluentd.org/), that sends data into [Yandex ClickHouse](clickhouse.yandex) database. By now it supports buffered output (*I still don't know how*) and handling few exceptions.
+It's a output plugin for [Fluentd](https://www.fluentd.org/), that sends data into [Yandex ClickHouse](https://clickhouse.yandex) database. By now it supports buffered output (*I still don't know how*) and handling few exceptions.
 
 # Installation ( debian 9 stretch )
 
@@ -11,7 +11,7 @@ apt install -y td-agent ruby ruby-dev
 ```
 
 # How to use it?
-I'm not a ruby programmer who knows how to write gems, so **just put `out_clickhouse.rb` to /etc/td-agent/plugin**.  
+I'm not a ruby programmer who knows how to write gems, so **just put [out_clickhouse.rb](out_clickhouse.rb) to /etc/td-agent/plugin**.  
 There's example td-agent.conf:
 ```
 <source>
@@ -45,5 +45,8 @@ After a few seconds, when buffer flushes, in ClickHouse you could see this:
 # Wow, it doesn't even support HTTP auth  
 Yes, and besides auth, there's still a work to do:  
 * SSL
+* Timezones that doesn't suck
 * GZIP. ClickHouse supports compressing, so why not?
 * and more
+
+
