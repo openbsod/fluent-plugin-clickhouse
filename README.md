@@ -7,7 +7,7 @@ It's a output plugin for [Fluentd](https://www.fluentd.org/), that sends data in
 curl https://packages.treasuredata.com/GPG-KEY-td-agent | apt-key add -
 echo "deb http://packages.treasuredata.com/2/debian/stretch/ stretch contrib" > /etc/apt/sources.list.d/treasure-data.list
 apt update
-apt install -y td-agent
+apt install -y td-agent ruby ruby-dev
 ```
 
 # How to use it?
